@@ -1,1 +1,24 @@
-# linux-server-portfolio
+# Linux 서버 구축 및 운영 자동화 시스템
+
+Ubuntu 서버에 LEMP 스택(Linux·Nginx·MySQL·PHP)을 구축하고,
+보안·모니터링·장애복구·백업·로그분석을 자동화한 서버 운영 포트폴리오입니다.
+
+## 시스템 구성
+
+| 영역 | 구성 |
+|------|------|
+| OS | Ubuntu (듀얼부팅) |
+| 웹서버 | Nginx + HTTPS(SSL) |
+| DB | MySQL 8.0 |
+| 언어 | PHP 8.3 |
+| 자동화 | Shell Script + Cron |
+
+## 핵심 기능
+
+- **보안**: UFW 방화벽, SSH 키 인증, 비밀번호 로그인 차단, HTTPS 적용
+- **모니터링**: 5분마다 CPU·메모리·디스크·로드 자동 수집 → DB 기록 → 대시보드 표시
+- **장애 자동복구**: 1분마다 Nginx/MySQL/PHP-FPM 상태 감지, 다운 시 최대 3회 자동 재시작
+- **로그 분석**: 매일 자정 접속·오류·SSH 보안·백업 현황 리포트 자동 생성
+- **백업**: 매일 새벽 2시 DB+웹파일 자동 백업, 30일 보존 정책
+
+## 폴더 구조# linux-server-portfolio
